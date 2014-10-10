@@ -1,4 +1,4 @@
 tgx_manager
 ===========
 
-script utils for manager.  tax.inc
+script utils for manager.  tgx.inc
