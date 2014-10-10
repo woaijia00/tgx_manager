@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+#Script using to copy the ssh rsa to remote address
+
+rsa_path='/root/.ssh/id_rsa.pub'
+
+cat ip.conf | while read ip  
+do
+    ssh-copy-id -i $rsa_path root@$ip
+    echo "copy to "$ip" done."
+done

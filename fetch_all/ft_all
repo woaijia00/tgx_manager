@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+#Script using to update all the TgxQueenServer in remote machines
+#author cann
+
+cat ip.conf | while read ip
+do
+	if ! echo $ip |grep -q '#'
+	then
+		sh tof $ip	
+	fi
+done

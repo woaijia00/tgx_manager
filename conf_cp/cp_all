@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+#Script using to copy the conf to remote address
+
+version=1.0.0
+
+cat ip.conf | while read ip  
+do
+	if ! echo $ip |grep -q '#'
+	then
+   	 scp /app/TGXQueenServer_config/config.properties  root@$ip:/usr/local/TgxQueenServer-$version/config/
+   	 scp /app/TGXQueenServer_config/rabbit_config.properties  root@$ip:/usr/local/TgxQueenServer-$version/config/
+	echo "copy to "$ip" done."
+	fi
+done

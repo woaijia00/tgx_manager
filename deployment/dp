@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+#Script using to deploy QueenServer
+
+#################################################################
+svn_dir='/root/svn'
+work_dir='/root/svn/TgxQueenServer'
+#svn_addr='https://svn.tinygamex.com:4443/svn/TgxTina/branches/0.55/TgxQueenServer/'
+svn_addr='https://svn.tinygamex.com:4443/svn/TgxTina/branches/0.81/TgxQueenServer/'
+#################################################################
+
+if [ ! -d $work_dir ]
+then
+	if [ ! -d $svn_dir ]
+	then
+		mkdir -p $svn_dir
+		echo "created svn dir..." 
+	fi
+	cd $svn_dir
+        svn checkout $svn_addr 
+fi
+
+cd $work_dir
+svn cleanup
+svn update
+gradle clean
+gradle uploadTQS 

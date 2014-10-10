@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+work_dir='/usr/local/TgxQueenServer-*'
+
+ip=$(eval "echo \$$#")
+#echo "IP:_________"$ip
+ssh -t -t root@$ip <<EOF
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+exit
+EOF

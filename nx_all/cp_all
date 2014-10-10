@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+toPath='/usr/local/nxfetch.tar'
+
+cat ip.conf | while read ip
+do
+	scp $toPath root@$ip:$toPath
+done

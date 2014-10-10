@@ -1,0 +1,891 @@
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:23:08 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (GENERIC) #0 r260789: Thu Jan 16 22:34:59 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd011:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd011:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd011:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd011:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd011:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd011:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.5%##################################                                        47.3%###################################################                       70.9%####################################################################      94.7%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd011:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd011:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd011:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd011:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:23:14 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (GENERIC) #0 r260789: Thu Jan 16 22:34:59 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd012:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd012:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd012:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd012:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd012:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd012:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.5%##################################                                        47.4%###################################################                       71.3%####################################################################      95.2%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd012:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd012:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd012:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd012:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:23:22 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (IPFWGENERIC) #0: Wed Jun 25 12:29:30 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd013:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd013:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd013:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd013:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd013:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd013:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.5%##################################                                        47.4%###################################################                       71.0%####################################################################      94.8%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd013:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd013:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd013:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd013:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:23:19 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (IPFWGENERIC) #0: Wed Jun 25 12:30:26 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd015:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd015:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd015:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd015:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd015:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd015:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.6%##################################                                        47.4%###################################################                       71.2%####################################################################      95.0%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd015:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd015:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd015:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd015:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:22:46 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (IPFWGENERIC) #0: Wed Jun 25 12:31:29 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd016:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd016:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd016:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd016:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd016:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd016:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.5%##################################                                        47.4%###################################################                       71.2%####################################################################      95.1%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd016:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd016:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd016:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd016:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:23:02 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (IPFWGENERIC) #0: Wed Jun 25 12:31:49 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd017:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd017:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd017:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd017:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd017:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd017:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.6%##################################                                        47.4%###################################################                       71.2%####################################################################      95.1%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd017:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd017:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd017:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd017:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:23:02 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (IPFWGENERIC) #0: Wed Jun 25 12:31:59 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd018:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd018:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd018:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd018:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd018:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd018:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.5%##################################                                        47.4%###################################################                       71.2%####################################################################      95.0%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd018:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd018:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd018:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd018:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:22:54 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (GENERIC) #0: Wed Jun 25 12:56:27 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd019:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd019:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd019:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd019:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd019:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd019:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.6%##################################                                        47.4%###################################################                       71.3%####################################################################      95.2%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd019:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd019:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd019:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd019:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+sh TgxQueenServer stop
+cd /usr/local/nxfetch
+sh nxfetch remove TgxQueenServer
+sh nxfetch install TgxQueenServer
+cd /usr/local/TgxQueenServer-*
+cd ./bin
+#sh TgxQueenServer start
+exit
+Last login: Wed Jul 23 16:23:23 2014 from 10.0.0.21
+FreeBSD 10.0-RELEASE (IPFWGENERIC) #0: Wed Jun 25 12:32:29 UTC 2014
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg install lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+root@freebsd020:~ # cd /usr/local/TgxQueenServer-*
+root@freebsd020:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd020:/usr/local/TgxQueenServer-1.0.0/bin # sh TgxQueenServer stop
+trying to stop TgxQueenServer service
+The server is not running.
+stoped TgxQueenServer service
+root@freebsd020:/usr/local/TgxQueenServer-1.0.0/bin # cd /usr/local/nxfetch
+root@freebsd020:/usr/local/nxfetch # sh nxfetch remove TgxQueenServer
+starting to remove the app ...
+/usr/local/nxfetch/bin/removeApp.sh -v  -p /usr/local/nxfetch TgxQueenServer
+deleting app files............
+DELETE: /usr/local/TgxQueenServer*
+root@freebsd020:/usr/local/nxfetch # sh nxfetch install TgxQueenServer
+starting to install the app ...
+/usr/local/nxfetch/bin/installApp.sh -v  -r releases -n 10.0.0.21:4444 -p /usr/local/nxfetch -g com.tgx.app TgxQueenServer
+fetch version from:
+http://10.0.0.21:4444/nexus/service/local/lucene/search?g=com.tgx.app&a=TgxQueenServer
+fetching artifact from:
+http://10.0.0.21:4444/nexus/service/local/artifact/maven/redirect?r=releases&g=com.tgx.app&a=TgxQueenServer&e=zip&v=1.0.0
+######################################################################## 100.0%################                                                          23.5%#################################                                         47.1%###################################################                       71.0%####################################################################      94.8%######################################################################## 100.0%
+unziping the artifact.....
+Archive:  /usr/local/nxfetch/dist/TgxQueenServer-1.0.0.zip
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/TgxQueenServer-1.0.0.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-collections4-4.0.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/disruptor-3.2.1.jar | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/mybatis-3.2.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | /  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/postgresql-9.3-1100.jdbc41.jar | / - \ | / - \ | / - \ | / - \ | / -  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/rabbitmq-client.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jedis-2.0.0.jar | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/fastjson-1.1.26.jar | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-pool-1.5.4.jar | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/commons-lang-2.5.jar | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/jackson-all-1.8.5.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/zookeeper-3.4.6.jar | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/lib/slf4j-api-1.6.1.jar | /  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer.bat |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/bin/TgxQueenServer |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/drop_tables.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_message_table.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxclient_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/create_sequence.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxbind_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/test.sql |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis-config-postgre.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/rabbit_config.properties |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxtag_mapper.xml |  
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/config/mybatis_tgxusr_mapper.xml |  
+d /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni
+ extracting: /usr/local/nxfetch/dist/TgxQueenServer-1.0.0/jni/libtgxCryptUtil.so | / -  
+installing to /usr/local......
+Done.
+root@freebsd020:/usr/local/nxfetch # cd /usr/local/TgxQueenServer-*
+root@freebsd020:/usr/local/TgxQueenServer-1.0.0 # cd ./bin
+root@freebsd020:/usr/local/TgxQueenServer-1.0.0/bin # #sh TgxQueenServer start
+#sh: Command not found.
+root@freebsd020:/usr/local/TgxQueenServer-1.0.0/bin # exit
+logout
